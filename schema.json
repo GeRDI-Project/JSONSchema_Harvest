@@ -1,8 +1,7 @@
 {
-  "$id": "http://gerdi.org/schema.json",
+  "$id": "http://gerdi.org/schema2.json",
   "type": "object",
   "definitions": {},
-  "$schema": "http://gerdi.org/v2.0/schema#",
   "properties": {
     "identifier": {
       "$id": "/properties/identifier",
@@ -905,6 +904,102 @@
           }
         }
       }
+    },
+    "webLinks": {
+      "$id": "/properties/webLinks",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "webLinkName": {
+            "$id": "/properties/webLinks/properties/webLinkName",
+            "type": "string",
+            "title": "The Value Schema ",
+            "default": "",
+            "examples": [
+              "Fishing quotas"
+            ]
+          },
+          "webLinkURI": {
+            "$id": "/properties/webLinks/properties/webLinkURI",
+            "type": "string",
+            "title": "The Value Schema ",
+            "default": "",
+            "examples": [
+              "http://gerdi.org/randomlink/123.csv"
+            ]
+          },
+          "webLinkType": {
+            "$id": "/properties/webLinks/properties/webLinkType",
+            "type": "string",
+            "enum": [ "ViewURL", "SourceURL", "ProviderLogoURL", "ThumbnailURL", "Related" ],
+            "title": "The Value Schema ",
+            "default": "",
+            "examples": [
+              "ViewURL"
+            ]
+
+          }
+        },
+        "required": ["webLinkURI"]
+      }
+    },
+    "repositoryIdentifier": {
+      "$id": "/properties/repositoryIdentifier",
+      "type": "string",
+      "title": "The repository's identifier"
+    },
+    "researchDataList": {
+      "$id": "/properties/researchData",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "researchDataIdentifier": {
+            "$id": "/properties/repositoryIdentifier/properties/researchDataIdentifier",
+            "type": "string"
+          },
+          "researchDataURL": {
+            "$id": "/properties/repositoryIdentifier/properties/researchDataURL",
+            "type": "string"
+          },
+          "researchDataLabel": {
+            "$id": "/properties/repositoryIdentifier/properties/researchDataLabel",
+            "type": "string"
+          },
+          "researchDataType": {
+            "$id": "/properties/repositoryIdentifier/properties/researchDataType",
+            "type": "string"
+          }
+        },
+        "required": ["researchDataIdentifier", "researchDataURL"]
+      }
+    },
+    "researchDiscipline": {
+      "$id": "/properties/researchDiscipline",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "discipline": {
+            "$id": "/properties/researchDiscipline/properties/discipline",
+            "type": "string"
+          },
+          "area": {
+            "$id": "/properties/researchDiscipline/properties/area",
+            "type": "string"
+          },
+          "category": {
+            "$id": "/properties/researchDiscipline/properties/category",
+            "type": "string"
+          },
+          "rnbr": {
+            "$id": "/properties/researchDiscipline/properties/rnbr",    
+            "type": "string"
+          }
+        }
+      }
     }
-  }
+  },
+  "required": ["repositoryIdentifier", "researchDataList"]
 }
