@@ -31,110 +31,113 @@
     "creators": {
       "$id": "/properties/creators",
       "type": "array",
-      "properties": {
-        "creator": {
-          "$id": "/properties/creators/properties/creator",
-          "type": "object",
-          "properties": {
-            "creatorName": {
-              "$id": "/properties/creators/properties/creator/properties/creatorName",
-              "type": "object",
-              "properties": {
-                "nameType": {
-                  "$id": "/properties/creators/properties/creator/properties/creatorName/properties/nameType",
-                  "type": "string",
-                  "title": "The Nametype Schema ",
-                  "default": "",
-                  "examples": [
-                    "Personal"
-                  ]
-                },
-                "value": {
-                  "$id": "/properties/creators/properties/creator/properties/creatorName/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "Miller, Elizabeth"
-                  ]
+      "items": {
+        "type": "object",
+        "properties": {
+          "creator": {
+            "$id": "/properties/creators/properties/creator",
+            "type": "object",
+            "properties": {
+              "creatorName": {
+                "$id": "/properties/creators/properties/creator/properties/creatorName",
+                "type": "object",
+                "properties": {
+                  "nameType": {
+                    "$id": "/properties/creators/properties/creator/properties/creatorName/properties/nameType",
+                    "type": "string",
+                    "title": "The Nametype Schema ",
+                    "default": "",
+                    "examples": [
+                      "Personal"
+                    ]
+                  },
+                  "value": {
+                    "$id": "/properties/creators/properties/creator/properties/creatorName/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "Miller, Elizabeth"
+                    ]
+                  }
                 }
-              }
-            },
-            "givenName": {
-              "$id": "/properties/creators/properties/creator/properties/givenName",
-              "type": "object",
-              "properties": {
-                "value": {
-                  "$id": "/properties/creators/properties/creator/properties/givenName/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "Elizabeth"
-                  ]
+              },
+              "givenName": {
+                "$id": "/properties/creators/properties/creator/properties/givenName",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "$id": "/properties/creators/properties/creator/properties/givenName/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "Elizabeth"
+                    ]
+                  }
                 }
-              }
-            },
-            "familyName": {
-              "$id": "/properties/creators/properties/creator/properties/familyName",
-              "type": "object",
-              "properties": {
-                "value": {
-                  "$id": "/properties/creators/properties/creator/properties/familyName/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "Miller"
-                  ]
+              },
+              "familyName": {
+                "$id": "/properties/creators/properties/creator/properties/familyName",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "$id": "/properties/creators/properties/creator/properties/familyName/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "Miller"
+                    ]
+                  }
                 }
-              }
-            },
-            "nameIdentifier": {
-              "$id": "/properties/creators/properties/creator/properties/nameIdentifier",
-              "type": "object",
-              "properties": {
-                "schemeURI": {
-                  "$id": "/properties/creators/properties/creator/properties/nameIdentifier/properties/schemeURI",
-                  "type": "string",
-                  "title": "The Schemeuri Schema ",
-                  "default": "",
-                  "examples": [
-                    "http://orcid.org/"
-                  ]
-                },
-                "nameIdentifierScheme": {
-                  "$id": "/properties/creators/properties/creator/properties/nameIdentifier/properties/nameIdentifierScheme",
-                  "type": "string",
-                  "title": "The Nameidentifierscheme Schema ",
-                  "default": "",
-                  "examples": [
-                    "ORCID"
-                  ]
-                },
-                "value": {
-                  "$id": "/properties/creators/properties/creator/properties/nameIdentifier/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "0000-0001-5000-0007"
-                  ]
+              },
+              "nameIdentifier": {
+                "$id": "/properties/creators/properties/creator/properties/nameIdentifier",
+                "type": "object",
+                "properties": {
+                  "schemeURI": {
+                    "$id": "/properties/creators/properties/creator/properties/nameIdentifier/properties/schemeURI",
+                    "type": "string",
+                    "title": "The Schemeuri Schema ",
+                    "default": "",
+                    "examples": [
+                      "http://orcid.org/"
+                    ]
+                  },
+                  "nameIdentifierScheme": {
+                    "$id": "/properties/creators/properties/creator/properties/nameIdentifier/properties/nameIdentifierScheme",
+                    "type": "string",
+                    "title": "The Nameidentifierscheme Schema ",
+                    "default": "",
+                    "examples": [
+                      "ORCID"
+                    ]
+                  },
+                  "value": {
+                    "$id": "/properties/creators/properties/creator/properties/nameIdentifier/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "0000-0001-5000-0007"
+                    ]
+                  }
                 }
-              }
-            },
-            "affiliation": {
-              "$id": "/properties/creators/properties/creator/properties/affiliation",
-              "type": "object",
-              "properties": {
-                "value": {
-                  "$id": "/properties/creators/properties/creator/properties/affiliation/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "DataCite"
-                  ]
+              },
+              "affiliation": {
+                "$id": "/properties/creators/properties/creator/properties/affiliation",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "$id": "/properties/creators/properties/creator/properties/affiliation/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "DataCite"
+                    ]
+                  }
                 }
               }
             }
@@ -145,31 +148,34 @@
     "titles": {
       "$id": "/properties/titles",
       "type": "array",
-      "properties": {
-        "title": {
-          "$id": "/properties/titles/properties/title",
-          "type": "array",
-          "items": {
-            "$id": "/properties/titles/properties/title/items",
-            "type": "object",
-            "properties": {
-              "lang": {
-                "$id": "/properties/titles/properties/title/items/properties/lang",
-                "type": "string",
-                "title": "The Lang Schema ",
-                "default": "",
-                "examples": [
-                  "en-US"
-                ]
-              },
-              "value": {
-                "$id": "/properties/titles/properties/title/items/properties/value",
-                "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
-                "examples": [
-                  "Full DataCite XML Example"
-                ]
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "$id": "/properties/titles/properties/title",
+            "type": "array",
+            "items": {
+              "$id": "/properties/titles/properties/title/items",
+              "type": "object",
+              "properties": {
+                "lang": {
+                  "$id": "/properties/titles/properties/title/items/properties/lang",
+                  "type": "string",
+                  "title": "The Lang Schema ",
+                  "default": "",
+                  "examples": [
+                    "en-US"
+                  ]
+                },
+                "value": {
+                  "$id": "/properties/titles/properties/title/items/properties/value",
+                  "type": "string",
+                  "title": "The Value Schema ",
+                  "default": "",
+                  "examples": [
+                    "Full DataCite XML Example"
+                  ]
+                }
               }
             }
           }
@@ -198,46 +204,49 @@
     "subjects": {
       "$id": "/properties/subjects",
       "type": "array",
-      "properties": {
-        "subject": {
-          "$id": "/properties/subjects/properties/subject",
-          "type": "object",
-          "properties": {
-            "lang": {
-              "$id": "/properties/subjects/properties/subject/properties/lang",
-              "type": "string",
-              "title": "The Lang Schema ",
-              "default": "",
-              "examples": [
-                "en-US"
-              ]
-            },
-            "schemeURI": {
-              "$id": "/properties/subjects/properties/subject/properties/schemeURI",
-              "type": "string",
-              "title": "The Schemeuri Schema ",
-              "default": "",
-              "examples": [
-                "http://dewey.info/"
-              ]
-            },
-            "subjectScheme": {
-              "$id": "/properties/subjects/properties/subject/properties/subjectScheme",
-              "type": "string",
-              "title": "The Subjectscheme Schema ",
-              "default": "",
-              "examples": [
-                "dewey"
-              ]
-            },
-            "value": {
-              "$id": "/properties/subjects/properties/subject/properties/value",
-              "type": "string",
-              "title": "The Value Schema ",
-              "default": "",
-              "examples": [
-                "000 computer science"
-              ]
+      "items": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "$id": "/properties/subjects/properties/subject",
+            "type": "object",
+            "properties": {
+              "lang": {
+                "$id": "/properties/subjects/properties/subject/properties/lang",
+                "type": "string",
+                "title": "The Lang Schema ",
+                "default": "",
+                "examples": [
+                  "en-US"
+                ]
+              },
+              "schemeURI": {
+                "$id": "/properties/subjects/properties/subject/properties/schemeURI",
+                "type": "string",
+                "title": "The Schemeuri Schema ",
+                "default": "",
+                "examples": [
+                  "http://dewey.info/"
+                ]
+              },
+              "subjectScheme": {
+                "$id": "/properties/subjects/properties/subject/properties/subjectScheme",
+                "type": "string",
+                "title": "The Subjectscheme Schema ",
+                "default": "",
+                "examples": [
+                  "dewey"
+                ]
+              },
+              "value": {
+                "$id": "/properties/subjects/properties/subject/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "000 computer science"
+                ]
+              }
             }
           }
         }
@@ -246,110 +255,113 @@
     "contributors": {
       "$id": "/properties/contributors",
       "type": "array",
-      "properties": {
-        "contributor": {
-          "$id": "/properties/contributors/properties/contributor",
-          "type": "object",
-          "properties": {
-            "contributorType": {
-              "$id": "/properties/contributors/properties/contributor/properties/contributorType",
-              "type": "string",
-              "title": "The Contributortype Schema ",
-              "default": "",
-              "examples": [
-                "ProjectLeader"
-              ]
-            },
-            "contributorName": {
-              "$id": "/properties/contributors/properties/contributor/properties/contributorName",
-              "type": "object",
-              "properties": {
-                "value": {
-                  "$id": "/properties/contributors/properties/contributor/properties/contributorName/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "Starr, Joan"
-                  ]
+      "items": {
+        "type": "object",
+        "properties": {
+          "contributor": {
+            "$id": "/properties/contributors/properties/contributor",
+            "type": "object",
+            "properties": {
+              "contributorType": {
+                "$id": "/properties/contributors/properties/contributor/properties/contributorType",
+                "type": "string",
+                "title": "The Contributortype Schema ",
+                "default": "",
+                "examples": [
+                  "ProjectLeader"
+                ]
+              },
+              "contributorName": {
+                "$id": "/properties/contributors/properties/contributor/properties/contributorName",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "$id": "/properties/contributors/properties/contributor/properties/contributorName/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "Starr, Joan"
+                    ]
+                  }
                 }
-              }
-            },
-            "givenName": {
-              "$id": "/properties/contributors/properties/contributor/properties/givenName",
-              "type": "object",
-              "properties": {
-                "value": {
-                  "$id": "/properties/contributors/properties/contributor/properties/givenName/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "Joan"
-                  ]
+              },
+              "givenName": {
+                "$id": "/properties/contributors/properties/contributor/properties/givenName",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "$id": "/properties/contributors/properties/contributor/properties/givenName/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "Joan"
+                    ]
+                  }
                 }
-              }
-            },
-            "familyName": {
-              "$id": "/properties/contributors/properties/contributor/properties/familyName",
-              "type": "object",
-              "properties": {
-                "value": {
-                  "$id": "/properties/contributors/properties/contributor/properties/familyName/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "Starr"
-                  ]
+              },
+              "familyName": {
+                "$id": "/properties/contributors/properties/contributor/properties/familyName",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "$id": "/properties/contributors/properties/contributor/properties/familyName/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "Starr"
+                    ]
+                  }
                 }
-              }
-            },
-            "nameIdentifier": {
-              "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier",
-              "type": "object",
-              "properties": {
-                "schemeURI": {
-                  "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier/properties/schemeURI",
-                  "type": "string",
-                  "title": "The Schemeuri Schema ",
-                  "default": "",
-                  "examples": [
-                    "http://orcid.org/"
-                  ]
-                },
-                "nameIdentifierScheme": {
-                  "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier/properties/nameIdentifierScheme",
-                  "type": "string",
-                  "title": "The Nameidentifierscheme Schema ",
-                  "default": "",
-                  "examples": [
-                    "ORCID"
-                  ]
-                },
-                "value": {
-                  "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "0000-0002-7285-027X"
-                  ]
+              },
+              "nameIdentifier": {
+                "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier",
+                "type": "object",
+                "properties": {
+                  "schemeURI": {
+                    "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier/properties/schemeURI",
+                    "type": "string",
+                    "title": "The Schemeuri Schema ",
+                    "default": "",
+                    "examples": [
+                      "http://orcid.org/"
+                    ]
+                  },
+                  "nameIdentifierScheme": {
+                    "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier/properties/nameIdentifierScheme",
+                    "type": "string",
+                    "title": "The Nameidentifierscheme Schema ",
+                    "default": "",
+                    "examples": [
+                      "ORCID"
+                    ]
+                  },
+                  "value": {
+                    "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "0000-0002-7285-027X"
+                    ]
+                  }
                 }
-              }
-            },
-            "affiliation": {
-              "$id": "/properties/contributors/properties/contributor/properties/affiliation",
-              "type": "object",
-              "properties": {
-                "value": {
-                  "$id": "/properties/contributors/properties/contributor/properties/affiliation/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "California Digital Library"
-                  ]
+              },
+              "affiliation": {
+                "$id": "/properties/contributors/properties/contributor/properties/affiliation",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "$id": "/properties/contributors/properties/contributor/properties/affiliation/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "California Digital Library"
+                    ]
+                  }
                 }
               }
             }
@@ -360,37 +372,40 @@
     "dates": {
       "$id": "/properties/dates",
       "type": "array",
-      "properties": {
-        "date": {
-          "$id": "/properties/dates/properties/date",
-          "type": "object",
-          "properties": {
-            "dateType": {
-              "$id": "/properties/dates/properties/date/properties/dateType",
-              "type": "string",
-              "title": "The Datetype Schema ",
-              "default": "",
-              "examples": [
-                "Updated"
-              ]
-            },
-            "dateInformation": {
-              "$id": "/properties/dates/properties/date/properties/dateInformation",
-              "type": "string",
-              "title": "The Dateinformation Schema ",
-              "default": "",
-              "examples": [
-                "Updated with 4.1 properties"
-              ]
-            },
-            "value": {
-              "$id": "/properties/dates/properties/date/properties/value",
-              "type": "string",
-              "title": "The Value Schema ",
-              "default": "",
-              "examples": [
-                "2017-09-13"
-              ]
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "$id": "/properties/dates/properties/date",
+            "type": "object",
+            "properties": {
+              "dateType": {
+                "$id": "/properties/dates/properties/date/properties/dateType",
+                "type": "string",
+                "title": "The Datetype Schema ",
+                "default": "",
+                "examples": [
+                  "Updated"
+                ]
+              },
+              "dateInformation": {
+                "$id": "/properties/dates/properties/date/properties/dateInformation",
+                "type": "string",
+                "title": "The Dateinformation Schema ",
+                "default": "",
+                "examples": [
+                  "Updated with 4.1 properties"
+                ]
+              },
+              "value": {
+                "$id": "/properties/dates/properties/date/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "2017-09-13"
+                ]
+              }
             }
           }
         }
@@ -432,28 +447,31 @@
     "alternateIdentifiers": {
       "$id": "/properties/alternateIdentifiers",
       "type": "array",
-      "properties": {
-        "alternateIdentifier": {
-          "$id": "/properties/alternateIdentifiers/properties/alternateIdentifier",
-          "type": "object",
-          "properties": {
-            "alternateIdentifierType": {
-              "$id": "/properties/alternateIdentifiers/properties/alternateIdentifier/properties/alternateIdentifierType",
-              "type": "string",
-              "title": "The Alternateidentifiertype Schema ",
-              "default": "",
-              "examples": [
-                "URL"
-              ]
-            },
-            "value": {
-              "$id": "/properties/alternateIdentifiers/properties/alternateIdentifier/properties/value",
-              "type": "string",
-              "title": "The Value Schema ",
-              "default": "",
-              "examples": [
-                "https://schema.datacite.org/meta/kernel-4.1/example/datacite-example-full-v4.1.xml"
-              ]
+      "items": {
+        "type": "object",
+        "properties": {
+          "alternateIdentifier": {
+            "$id": "/properties/alternateIdentifiers/properties/alternateIdentifier",
+            "type": "object",
+            "properties": {
+              "alternateIdentifierType": {
+                "$id": "/properties/alternateIdentifiers/properties/alternateIdentifier/properties/alternateIdentifierType",
+                "type": "string",
+                "title": "The Alternateidentifiertype Schema ",
+                "default": "",
+                "examples": [
+                  "URL"
+                ]
+              },
+              "value": {
+                "$id": "/properties/alternateIdentifiers/properties/alternateIdentifier/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "https://schema.datacite.org/meta/kernel-4.1/example/datacite-example-full-v4.1.xml"
+                ]
+              }
             }
           }
         }
@@ -462,58 +480,61 @@
     "relatedIdentifiers": {
       "$id": "/properties/relatedIdentifiers",
       "type": "array",
-      "properties": {
-        "relatedIdentifier": {
-          "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier",
-          "type": "array",
-          "items": {
-            "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items",
-            "type": "object",
-            "properties": {
-              "relatedIdentifierType": {
-                "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/relatedIdentifierType",
-                "type": "string",
-                "title": "The Relatedidentifiertype Schema ",
-                "default": "",
-                "examples": [
-                  "URL"
-                ]
-              },
-              "relationType": {
-                "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/relationType",
-                "type": "string",
-                "title": "The Relationtype Schema ",
-                "default": "",
-                "examples": [
-                  "HasMetadata"
-                ]
-              },
-              "relatedMetadataScheme": {
-                "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/relatedMetadataScheme",
-                "type": "string",
-                "title": "The Relatedmetadatascheme Schema ",
-                "default": "",
-                "examples": [
-                  "citeproc+json"
-                ]
-              },
-              "schemeURI": {
-                "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/schemeURI",
-                "type": "string",
-                "title": "The Schemeuri Schema ",
-                "default": "",
-                "examples": [
-                  "https://github.com/citation-style-language/schema/raw/master/csl-data.json"
-                ]
-              },
-              "value": {
-                "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/value",
-                "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
-                "examples": [
-                  "https://data.datacite.org/application/citeproc+json/10.5072/example-full"
-                ]
+      "items": {
+        "type": "object",
+        "properties": {
+          "relatedIdentifier": {
+            "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier",
+            "type": "array",
+            "items": {
+              "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items",
+              "type": "object",
+              "properties": {
+                "relatedIdentifierType": {
+                  "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/relatedIdentifierType",
+                  "type": "string",
+                  "title": "The Relatedidentifiertype Schema ",
+                  "default": "",
+                  "examples": [
+                    "URL"
+                  ]
+                },
+                "relationType": {
+                  "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/relationType",
+                  "type": "string",
+                  "title": "The Relationtype Schema ",
+                  "default": "",
+                  "examples": [
+                    "HasMetadata"
+                  ]
+                },
+                "relatedMetadataScheme": {
+                  "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/relatedMetadataScheme",
+                  "type": "string",
+                  "title": "The Relatedmetadatascheme Schema ",
+                  "default": "",
+                  "examples": [
+                    "citeproc+json"
+                  ]
+                },
+                "schemeURI": {
+                  "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/schemeURI",
+                  "type": "string",
+                  "title": "The Schemeuri Schema ",
+                  "default": "",
+                  "examples": [
+                    "https://github.com/citation-style-language/schema/raw/master/csl-data.json"
+                  ]
+                },
+                "value": {
+                  "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/value",
+                  "type": "string",
+                  "title": "The Value Schema ",
+                  "default": "",
+                  "examples": [
+                    "https://data.datacite.org/application/citeproc+json/10.5072/example-full"
+                  ]
+                }
               }
             }
           }
@@ -523,19 +544,22 @@
     "sizes": {
       "$id": "/properties/sizes",
       "type": "array",
-      "properties": {
-        "size": {
-          "$id": "/properties/sizes/properties/size",
-          "type": "object",
-          "properties": {
-            "value": {
-              "$id": "/properties/sizes/properties/size/properties/value",
-              "type": "string",
-              "title": "The Value Schema ",
-              "default": "",
-              "examples": [
-                "4 kB"
-              ]
+      "items": {
+        "type": "object",
+        "properties": {
+          "size": {
+            "$id": "/properties/sizes/properties/size",
+            "type": "object",
+            "properties": {
+              "value": {
+                "$id": "/properties/sizes/properties/size/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "4 kB"
+                ]
+              }
             }
           }
         }
@@ -544,19 +568,22 @@
     "formats": {
       "$id": "/properties/formats",
       "type": "array",
-      "properties": {
-        "format": {
-          "$id": "/properties/formats/properties/format",
-          "type": "object",
-          "properties": {
-            "value": {
-              "$id": "/properties/formats/properties/format/properties/value",
-              "type": "string",
-              "title": "The Value Schema ",
-              "default": "",
-              "examples": [
-                "application/xml"
-              ]
+      "items": {
+        "type": "object",
+        "properties": {
+          "format": {
+            "$id": "/properties/formats/properties/format",
+            "type": "object",
+            "properties": {
+              "value": {
+                "$id": "/properties/formats/properties/format/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "application/xml"
+                ]
+              }
             }
           }
         }
@@ -574,37 +601,40 @@
     "rightsList": {
       "$id": "/properties/rightsList",
       "type": "array",
-      "properties": {
-        "rights": {
-          "$id": "/properties/rightsList/properties/rights",
-          "type": "object",
-          "properties": {
-            "lang": {
-              "$id": "/properties/rightsList/properties/rights/properties/lang",
-              "type": "string",
-              "title": "The Lang Schema ",
-              "default": "",
-              "examples": [
-                "en-US"
-              ]
-            },
-            "rightsURI": {
-              "$id": "/properties/rightsList/properties/rights/properties/rightsURI",
-              "type": "string",
-              "title": "The Rightsuri Schema ",
-              "default": "",
-              "examples": [
-                "http://creativecommons.org/publicdomain/zero/1.0/"
-              ]
-            },
-            "value": {
-              "$id": "/properties/rightsList/properties/rights/properties/value",
-              "type": "string",
-              "title": "The Value Schema ",
-              "default": "",
-              "examples": [
-                "CC0 1.0 Universal"
-              ]
+      "items": {
+        "type": "object",
+        "properties": {
+          "rights": {
+            "$id": "/properties/rightsList/properties/rights",
+            "type": "object",
+            "properties": {
+              "lang": {
+                "$id": "/properties/rightsList/properties/rights/properties/lang",
+                "type": "string",
+                "title": "The Lang Schema ",
+                "default": "",
+                "examples": [
+                  "en-US"
+                ]
+              },
+              "rightsURI": {
+                "$id": "/properties/rightsList/properties/rights/properties/rightsURI",
+                "type": "string",
+                "title": "The Rightsuri Schema ",
+                "default": "",
+                "examples": [
+                  "http://creativecommons.org/publicdomain/zero/1.0/"
+                ]
+              },
+              "value": {
+                "$id": "/properties/rightsList/properties/rights/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "CC0 1.0 Universal"
+                ]
+              }
             }
           }
         }
@@ -613,37 +643,40 @@
     "descriptions": {
       "$id": "/properties/descriptions",
       "type": "array",
-      "properties": {
-        "description": {
-          "$id": "/properties/descriptions/properties/description",
-          "type": "object",
-          "properties": {
-            "lang": {
-              "$id": "/properties/descriptions/properties/description/properties/lang",
-              "type": "string",
-              "title": "The Lang Schema ",
-              "default": "",
-              "examples": [
-                "en-US"
-              ]
-            },
-            "descriptionType": {
-              "$id": "/properties/descriptions/properties/description/properties/descriptionType",
-              "type": "string",
-              "title": "The Descriptiontype Schema ",
-              "default": "",
-              "examples": [
-                "Abstract"
-              ]
-            },
-            "value": {
-              "$id": "/properties/descriptions/properties/description/properties/value",
-              "type": "string",
-              "title": "The Value Schema ",
-              "default": "",
-              "examples": [
-                "XML example of all DataCite Metadata Schema v4.1 properties."
-              ]
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "$id": "/properties/descriptions/properties/description",
+            "type": "object",
+            "properties": {
+              "lang": {
+                "$id": "/properties/descriptions/properties/description/properties/lang",
+                "type": "string",
+                "title": "The Lang Schema ",
+                "default": "",
+                "examples": [
+                  "en-US"
+                ]
+              },
+              "descriptionType": {
+                "$id": "/properties/descriptions/properties/description/properties/descriptionType",
+                "type": "string",
+                "title": "The Descriptiontype Schema ",
+                "default": "",
+                "examples": [
+                  "Abstract"
+                ]
+              },
+              "value": {
+                "$id": "/properties/descriptions/properties/description/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "XML example of all DataCite Metadata Schema v4.1 properties."
+                ]
+              }
             }
           }
         }
@@ -652,166 +685,169 @@
     "geoLocations": {
       "$id": "/properties/geoLocations",
       "type": "array",
-      "properties": {
-        "geoLocation": {
-          "$id": "/properties/geoLocations/properties/geoLocation",
-          "type": "object",
-          "properties": {
-            "geoLocationPlace": {
-              "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPlace",
-              "type": "object",
-              "properties": {
-                "value": {
-                  "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPlace/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "Atlantic Ocean"
-                  ]
-                }
-              }
-            },
-            "geoLocationPoint": {
-              "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPoint",
-              "type": "object",
-              "properties": {
-                "pointLongitude": {
-                  "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPoint/properties/pointLongitude",
-                  "type": "object",
-                  "properties": {
-                    "value": {
-                      "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPoint/properties/pointLongitude/properties/value",
-                      "type": "string",
-                      "title": "The Value Schema ",
-                      "default": "",
-                      "examples": [
-                        "-67.302"
-                      ]
-                    }
-                  }
-                },
-                "pointLatitude": {
-                  "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPoint/properties/pointLatitude",
-                  "type": "object",
-                  "properties": {
-                    "value": {
-                      "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPoint/properties/pointLatitude/properties/value",
-                      "type": "string",
-                      "title": "The Value Schema ",
-                      "default": "",
-                      "examples": [
-                        "31.233"
-                      ]
-                    }
+      "items": {
+        "type": "object",
+        "properties": {
+          "geoLocation": {
+            "$id": "/properties/geoLocations/properties/geoLocation",
+            "type": "object",
+            "properties": {
+              "geoLocationPlace": {
+                "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPlace",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPlace/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "Atlantic Ocean"
+                    ]
                   }
                 }
-              }
-            },
-            "geoLocationBox": {
-              "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox",
-              "type": "object",
-              "properties": {
-                "westBoundLongitude": {
-                  "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/westBoundLongitude",
-                  "type": "object",
-                  "properties": {
-                    "value": {
-                      "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/westBoundLongitude/properties/value",
-                      "type": "string",
-                      "title": "The Value Schema ",
-                      "default": "",
-                      "examples": [
-                        "-71.032"
-                      ]
-                    }
-                  }
-                },
-                "eastBoundLongitude": {
-                  "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/eastBoundLongitude",
-                  "type": "object",
-                  "properties": {
-                    "value": {
-                      "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/eastBoundLongitude/properties/value",
-                      "type": "string",
-                      "title": "The Value Schema ",
-                      "default": "",
-                      "examples": [
-                        "-68.211"
-                      ]
-                    }
-                  }
-                },
-                "southBoundLatitude": {
-                  "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/southBoundLatitude",
-                  "type": "object",
-                  "properties": {
-                    "value": {
-                      "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/southBoundLatitude/properties/value",
-                      "type": "string",
-                      "title": "The Value Schema ",
-                      "default": "",
-                      "examples": [
-                        "41.090"
-                      ]
-                    }
-                  }
-                },
-                "northBoundLatitude": {
-                  "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/northBoundLatitude",
-                  "type": "object",
-                  "properties": {
-                    "value": {
-                      "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/northBoundLatitude/properties/value",
-                      "type": "string",
-                      "title": "The Value Schema ",
-                      "default": "",
-                      "examples": [
-                        "42.893"
-                      ]
-                    }
-                  }
-                }
-              }
-            },
-            "geoLocationPolygon": {
-              "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon",
-              "type": "object",
-              "properties": {
-                "polygonPoint": {
-                  "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon/properties/polygonPoint",
-                  "type": "array",
-                  "items": {
-                    "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon/properties/polygonPoint/items",
+              },
+              "geoLocationPoint": {
+                "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPoint",
+                "type": "object",
+                "properties": {
+                  "pointLongitude": {
+                    "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPoint/properties/pointLongitude",
                     "type": "object",
                     "properties": {
-                      "pointLatitude": {
-                        "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon/properties/polygonPoint/items/properties/pointLatitude",
-                        "type": "object",
-                        "properties": {
-                          "value": {
-                            "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon/properties/polygonPoint/items/properties/pointLatitude/properties/value",
-                            "type": "string",
-                            "title": "The Value Schema ",
-                            "default": "",
-                            "examples": [
-                              "41.991"
-                            ]
+                      "value": {
+                        "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPoint/properties/pointLongitude/properties/value",
+                        "type": "string",
+                        "title": "The Value Schema ",
+                        "default": "",
+                        "examples": [
+                          "-67.302"
+                        ]
+                      }
+                    }
+                  },
+                  "pointLatitude": {
+                    "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPoint/properties/pointLatitude",
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPoint/properties/pointLatitude/properties/value",
+                        "type": "string",
+                        "title": "The Value Schema ",
+                        "default": "",
+                        "examples": [
+                          "31.233"
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "geoLocationBox": {
+                "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox",
+                "type": "object",
+                "properties": {
+                  "westBoundLongitude": {
+                    "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/westBoundLongitude",
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/westBoundLongitude/properties/value",
+                        "type": "string",
+                        "title": "The Value Schema ",
+                        "default": "",
+                        "examples": [
+                          "-71.032"
+                        ]
+                      }
+                    }
+                  },
+                  "eastBoundLongitude": {
+                    "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/eastBoundLongitude",
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/eastBoundLongitude/properties/value",
+                        "type": "string",
+                        "title": "The Value Schema ",
+                        "default": "",
+                        "examples": [
+                          "-68.211"
+                        ]
+                      }
+                    }
+                  },
+                  "southBoundLatitude": {
+                    "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/southBoundLatitude",
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/southBoundLatitude/properties/value",
+                        "type": "string",
+                        "title": "The Value Schema ",
+                        "default": "",
+                        "examples": [
+                          "41.090"
+                        ]
+                      }
+                    }
+                  },
+                  "northBoundLatitude": {
+                    "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/northBoundLatitude",
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationBox/properties/northBoundLatitude/properties/value",
+                        "type": "string",
+                        "title": "The Value Schema ",
+                        "default": "",
+                        "examples": [
+                          "42.893"
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "geoLocationPolygon": {
+                "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon",
+                "type": "object",
+                "properties": {
+                  "polygonPoint": {
+                    "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon/properties/polygonPoint",
+                    "type": "array",
+                    "items": {
+                      "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon/properties/polygonPoint/items",
+                      "type": "object",
+                      "properties": {
+                        "pointLatitude": {
+                          "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon/properties/polygonPoint/items/properties/pointLatitude",
+                          "type": "object",
+                          "properties": {
+                            "value": {
+                              "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon/properties/polygonPoint/items/properties/pointLatitude/properties/value",
+                              "type": "string",
+                              "title": "The Value Schema ",
+                              "default": "",
+                              "examples": [
+                                "41.991"
+                              ]
+                            }
                           }
-                        }
-                      },
-                      "pointLongitude": {
-                        "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon/properties/polygonPoint/items/properties/pointLongitude",
-                        "type": "object",
-                        "properties": {
-                          "value": {
-                            "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon/properties/polygonPoint/items/properties/pointLongitude/properties/value",
-                            "type": "string",
-                            "title": "The Value Schema ",
-                            "default": "",
-                            "examples": [
-                              "-71.032"
-                            ]
+                        },
+                        "pointLongitude": {
+                          "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon/properties/polygonPoint/items/properties/pointLongitude",
+                          "type": "object",
+                          "properties": {
+                            "value": {
+                              "$id": "/properties/geoLocations/properties/geoLocation/properties/geoLocationPolygon/properties/polygonPoint/items/properties/pointLongitude/properties/value",
+                              "type": "string",
+                              "title": "The Value Schema ",
+                              "default": "",
+                              "examples": [
+                                "-71.032"
+                              ]
+                            }
                           }
                         }
                       }
@@ -827,77 +863,80 @@
     "fundingReferences": {
       "$id": "/properties/fundingReferences",
       "type": "array",
-      "properties": {
-        "fundingReference": {
-          "$id": "/properties/fundingReferences/properties/fundingReference",
-          "type": "object",
-          "properties": {
-            "funderName": {
-              "$id": "/properties/fundingReferences/properties/fundingReference/properties/funderName",
-              "type": "object",
-              "properties": {
-                "value": {
-                  "$id": "/properties/fundingReferences/properties/fundingReference/properties/funderName/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "National Science Foundation"
-                  ]
+      "items": {
+        "type": "object",
+        "properties": {
+          "fundingReference": {
+            "$id": "/properties/fundingReferences/properties/fundingReference",
+            "type": "object",
+            "properties": {
+              "funderName": {
+                "$id": "/properties/fundingReferences/properties/fundingReference/properties/funderName",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "$id": "/properties/fundingReferences/properties/fundingReference/properties/funderName/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "National Science Foundation"
+                    ]
+                  }
                 }
-              }
-            },
-            "funderIdentifier": {
-              "$id": "/properties/fundingReferences/properties/fundingReference/properties/funderIdentifier",
-              "type": "object",
-              "properties": {
-                "funderIdentifierType": {
-                  "$id": "/properties/fundingReferences/properties/fundingReference/properties/funderIdentifier/properties/funderIdentifierType",
-                  "type": "string",
-                  "title": "The Funderidentifiertype Schema ",
-                  "default": "",
-                  "examples": [
-                    "Crossref Funder ID"
-                  ]
-                },
-                "value": {
-                  "$id": "/properties/fundingReferences/properties/fundingReference/properties/funderIdentifier/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "https://doi.org/10.13039/100000001"
-                  ]
+              },
+              "funderIdentifier": {
+                "$id": "/properties/fundingReferences/properties/fundingReference/properties/funderIdentifier",
+                "type": "object",
+                "properties": {
+                  "funderIdentifierType": {
+                    "$id": "/properties/fundingReferences/properties/fundingReference/properties/funderIdentifier/properties/funderIdentifierType",
+                    "type": "string",
+                    "title": "The Funderidentifiertype Schema ",
+                    "default": "",
+                    "examples": [
+                      "Crossref Funder ID"
+                    ]
+                  },
+                  "value": {
+                    "$id": "/properties/fundingReferences/properties/fundingReference/properties/funderIdentifier/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "https://doi.org/10.13039/100000001"
+                    ]
+                  }
                 }
-              }
-            },
-            "awardNumber": {
-              "$id": "/properties/fundingReferences/properties/fundingReference/properties/awardNumber",
-              "type": "object",
-              "properties": {
-                "value": {
-                  "$id": "/properties/fundingReferences/properties/fundingReference/properties/awardNumber/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "CBET-106"
-                  ]
+              },
+              "awardNumber": {
+                "$id": "/properties/fundingReferences/properties/fundingReference/properties/awardNumber",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "$id": "/properties/fundingReferences/properties/fundingReference/properties/awardNumber/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "CBET-106"
+                    ]
+                  }
                 }
-              }
-            },
-            "awardTitle": {
-              "$id": "/properties/fundingReferences/properties/fundingReference/properties/awardTitle",
-              "type": "object",
-              "properties": {
-                "value": {
-                  "$id": "/properties/fundingReferences/properties/fundingReference/properties/awardTitle/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "Full DataCite XML Example"
-                  ]
+              },
+              "awardTitle": {
+                "$id": "/properties/fundingReferences/properties/fundingReference/properties/awardTitle",
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "$id": "/properties/fundingReferences/properties/fundingReference/properties/awardTitle/properties/value",
+                    "type": "string",
+                    "title": "The Value Schema ",
+                    "default": "",
+                    "examples": [
+                      "Full DataCite XML Example"
+                    ]
+                  }
                 }
               }
             }
@@ -994,7 +1033,7 @@
             "type": "string"
           },
           "rnbr": {
-            "$id": "/properties/researchDiscipline/properties/rnbr",    
+            "$id": "/properties/researchDiscipline/properties/rnbr",
             "type": "string"
           }
         }
