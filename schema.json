@@ -1,5 +1,4 @@
 {
-  "$id": "http://gerdi.org/schema2.json",
   "type": "object",
   "definitions": {},
   "properties": {
@@ -10,7 +9,7 @@
         "identifierType": {
           "$id": "/properties/identifier/properties/identifierType",
           "type": "string",
-          "enum": [ "DOI" ],
+          "enum": ["DOI"],
           "title": "The Identifiertype Schema ",
           "default": "DOI",
           "examples": [
@@ -26,7 +25,8 @@
             "10.5072/example-full"
           ]
         }
-      }
+      },
+      "required": ["identifierType"]
     },
     "creators": {
       "$id": "/properties/creators",
@@ -34,115 +34,111 @@
       "items": {
         "type": "object",
         "properties": {
-          "creator": {
-            "$id": "/properties/creators/properties/creator",
+          "creatorName": {
+            "$id": "/properties/creators/properties/creator/properties/creatorName",
             "type": "object",
             "properties": {
-              "creatorName": {
-                "$id": "/properties/creators/properties/creator/properties/creatorName",
-                "type": "object",
-                "properties": {
-                  "nameType": {
-                    "$id": "/properties/creators/properties/creator/properties/creatorName/properties/nameType",
-                    "type": "string",
-                    "title": "The Nametype Schema ",
-                    "default": "",
-                    "examples": [
-                      "Personal"
-                    ]
-                  },
-                  "value": {
-                    "$id": "/properties/creators/properties/creator/properties/creatorName/properties/value",
-                    "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
-                    "examples": [
-                      "Miller, Elizabeth"
-                    ]
-                  }
-                }
+              "nameType": {
+                "$id": "/properties/creators/properties/creator/properties/creatorName/properties/nameType",
+                "type": "string",
+                "title": "The Nametype Schema ",
+                "default": "",
+                "examples": [
+                  "Personal"
+                ]
               },
-              "givenName": {
-                "$id": "/properties/creators/properties/creator/properties/givenName",
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "$id": "/properties/creators/properties/creator/properties/givenName/properties/value",
-                    "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
-                    "examples": [
-                      "Elizabeth"
-                    ]
-                  }
-                }
+              "value": {
+                "$id": "/properties/creators/properties/creator/properties/creatorName/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "Miller, Elizabeth"
+                ]
+              }
+            }
+          },
+          "givenName": {
+            "$id": "/properties/creators/properties/creator/properties/givenName",
+            "type": "object",
+            "properties": {
+              "value": {
+                "$id": "/properties/creators/properties/creator/properties/givenName/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "Elizabeth"
+                ]
+              }
+            }
+          },
+          "familyName": {
+            "$id": "/properties/creators/properties/creator/properties/familyName",
+            "type": "object",
+            "properties": {
+              "value": {
+                "$id": "/properties/creators/properties/creator/properties/familyName/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "Miller"
+                ]
+              }
+            }
+          },
+          "nameIdentifier": {
+            "$id": "/properties/creators/properties/creator/properties/nameIdentifier",
+            "type": "object",
+            "properties": {
+              "schemeURI": {
+                "$id": "/properties/creators/properties/creator/properties/nameIdentifier/properties/schemeURI",
+                "type": "string",
+                "title": "The Schemeuri Schema ",
+                "default": "",
+                "examples": [
+                  "http://orcid.org/"
+                ]
               },
-              "familyName": {
-                "$id": "/properties/creators/properties/creator/properties/familyName",
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "$id": "/properties/creators/properties/creator/properties/familyName/properties/value",
-                    "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
-                    "examples": [
-                      "Miller"
-                    ]
-                  }
-                }
+              "nameIdentifierScheme": {
+                "$id": "/properties/creators/properties/creator/properties/nameIdentifier/properties/nameIdentifierScheme",
+                "type": "string",
+                "title": "The Nameidentifierscheme Schema ",
+                "default": "",
+                "examples": [
+                  "ORCID"
+                ]
               },
-              "nameIdentifier": {
-                "$id": "/properties/creators/properties/creator/properties/nameIdentifier",
-                "type": "object",
-                "properties": {
-                  "schemeURI": {
-                    "$id": "/properties/creators/properties/creator/properties/nameIdentifier/properties/schemeURI",
-                    "type": "string",
-                    "title": "The Schemeuri Schema ",
-                    "default": "",
-                    "examples": [
-                      "http://orcid.org/"
-                    ]
-                  },
-                  "nameIdentifierScheme": {
-                    "$id": "/properties/creators/properties/creator/properties/nameIdentifier/properties/nameIdentifierScheme",
-                    "type": "string",
-                    "title": "The Nameidentifierscheme Schema ",
-                    "default": "",
-                    "examples": [
-                      "ORCID"
-                    ]
-                  },
-                  "value": {
-                    "$id": "/properties/creators/properties/creator/properties/nameIdentifier/properties/value",
-                    "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
-                    "examples": [
-                      "0000-0001-5000-0007"
-                    ]
-                  }
-                }
-              },
-              "affiliation": {
-                "$id": "/properties/creators/properties/creator/properties/affiliation",
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "$id": "/properties/creators/properties/creator/properties/affiliation/properties/value",
-                    "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
-                    "examples": [
-                      "DataCite"
-                    ]
-                  }
-                }
+              "value": {
+                "$id": "/properties/creators/properties/creator/properties/nameIdentifier/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "0000-0001-5000-0007"
+                ]
+              }
+            },
+            "required": ["nameIdentifierScheme"]
+          },
+          "affiliation": {
+            "$id": "/properties/creators/properties/creator/properties/affiliation",
+            "type": "object",
+            "properties": {
+              "value": {
+                "$id": "/properties/creators/properties/creator/properties/affiliation/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "DataCite"
+                ]
               }
             }
           }
-        }
+        },
+        "required": ["creatorName"]
       }
     },
     "titles": {
@@ -151,35 +147,31 @@
       "items": {
         "type": "object",
         "properties": {
-          "title": {
-            "$id": "/properties/titles/properties/title",
-            "type": "array",
-            "items": {
-              "$id": "/properties/titles/properties/title/items",
-              "type": "object",
-              "properties": {
-                "lang": {
-                  "$id": "/properties/titles/properties/title/items/properties/lang",
-                  "type": "string",
-                  "title": "The Lang Schema ",
-                  "default": "",
-                  "examples": [
-                    "en-US"
-                  ]
-                },
-                "value": {
-                  "$id": "/properties/titles/properties/title/items/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "Full DataCite XML Example"
-                  ]
-                }
-              }
-            }
+          "lang": {
+            "$id": "/properties/titles/properties/title/items/properties/lang",
+            "type": "string",
+            "title": "The Lang Schema ",
+            "default": "",
+            "examples": [
+              "en-US"
+            ]
+          },
+          "value": {
+            "$id": "/properties/titles/properties/title/items/properties/value",
+            "type": "string",
+            "title": "The Value Schema ",
+            "default": "",
+            "examples": [
+              "Full DataCite XML Example"
+            ]
+          },
+          "titleType": {
+            "$id": "/properties/titles/properties/title/items/properties/titleType",
+            "type": "string",
+            "enum": ["AlternativeTitle", "Subtitle", "TranslatedTitle", "Other"]
           }
-        }
+        },
+        "required": ["value"]
       }
     },
     "publisher": {
@@ -188,7 +180,7 @@
       "title": "The Value Schema ",
       "default": "",
       "examples": [
-      	"DataCite"
+        "DataCite"
       ]
 
     },
@@ -207,47 +199,41 @@
       "items": {
         "type": "object",
         "properties": {
-          "subject": {
-            "$id": "/properties/subjects/properties/subject",
-            "type": "object",
-            "properties": {
-              "lang": {
-                "$id": "/properties/subjects/properties/subject/properties/lang",
-                "type": "string",
-                "title": "The Lang Schema ",
-                "default": "",
-                "examples": [
-                  "en-US"
-                ]
-              },
-              "schemeURI": {
-                "$id": "/properties/subjects/properties/subject/properties/schemeURI",
-                "type": "string",
-                "title": "The Schemeuri Schema ",
-                "default": "",
-                "examples": [
-                  "http://dewey.info/"
-                ]
-              },
-              "subjectScheme": {
-                "$id": "/properties/subjects/properties/subject/properties/subjectScheme",
-                "type": "string",
-                "title": "The Subjectscheme Schema ",
-                "default": "",
-                "examples": [
-                  "dewey"
-                ]
-              },
-              "value": {
-                "$id": "/properties/subjects/properties/subject/properties/value",
-                "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
-                "examples": [
-                  "000 computer science"
-                ]
-              }
-            }
+          "lang": {
+            "$id": "/properties/subjects/properties/subject/properties/lang",
+            "type": "string",
+            "title": "The Lang Schema ",
+            "default": "",
+            "examples": [
+              "en-US"
+            ]
+          },
+          "schemeURI": {
+            "$id": "/properties/subjects/properties/subject/properties/schemeURI",
+            "type": "string",
+            "title": "The Schemeuri Schema ",
+            "default": "",
+            "examples": [
+              "http://dewey.info/"
+            ]
+          },
+          "subjectScheme": {
+            "$id": "/properties/subjects/properties/subject/properties/subjectScheme",
+            "type": "string",
+            "title": "The Subjectscheme Schema ",
+            "default": "",
+            "examples": [
+              "dewey"
+            ]
+          },
+          "value": {
+            "$id": "/properties/subjects/properties/subject/properties/value",
+            "type": "string",
+            "title": "The Value Schema ",
+            "default": "",
+            "examples": [
+              "000 computer science"
+            ]
           }
         }
       }
@@ -258,115 +244,109 @@
       "items": {
         "type": "object",
         "properties": {
-          "contributor": {
-            "$id": "/properties/contributors/properties/contributor",
+          "contributorType": {
+            "$id": "/properties/contributors/properties/contributor/properties/contributorType",
+            "type": "string",
+            "enum": ["ContactPerson", "DataCollector", "DataCurator", "DataManager", "Distributor", "Editor", "HostingInstitution", "Producer", "ProjectLeader", "ProjectManager", "ProjectMember", "RegistrationAgency", "RegistrationAuthority", "RelatedPerson", "Researcher", "ResearchGroup", "RightsHolder", "Sponsor", "Supervisor", "WorkPackageLeader", "Other"],
+            "title": "The Contributortype Schema ",
+            "default": "",
+            "examples": [
+              "ProjectLeader"
+            ]
+          },
+          "contributorName": {
+            "$id": "/properties/contributors/properties/contributor/properties/contributorName",
             "type": "object",
             "properties": {
-              "contributorType": {
-                "$id": "/properties/contributors/properties/contributor/properties/contributorType",
+              "value": {
+                "$id": "/properties/contributors/properties/contributor/properties/contributorName/properties/value",
                 "type": "string",
-                "title": "The Contributortype Schema ",
+                "title": "The Value Schema ",
                 "default": "",
                 "examples": [
-                  "ProjectLeader"
+                  "Starr, Joan"
                 ]
-              },
-              "contributorName": {
-                "$id": "/properties/contributors/properties/contributor/properties/contributorName",
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "$id": "/properties/contributors/properties/contributor/properties/contributorName/properties/value",
-                    "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
-                    "examples": [
-                      "Starr, Joan"
-                    ]
-                  }
-                }
-              },
-              "givenName": {
-                "$id": "/properties/contributors/properties/contributor/properties/givenName",
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "$id": "/properties/contributors/properties/contributor/properties/givenName/properties/value",
-                    "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
-                    "examples": [
-                      "Joan"
-                    ]
-                  }
-                }
-              },
-              "familyName": {
-                "$id": "/properties/contributors/properties/contributor/properties/familyName",
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "$id": "/properties/contributors/properties/contributor/properties/familyName/properties/value",
-                    "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
-                    "examples": [
-                      "Starr"
-                    ]
-                  }
-                }
-              },
-              "nameIdentifier": {
-                "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier",
-                "type": "object",
-                "properties": {
-                  "schemeURI": {
-                    "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier/properties/schemeURI",
-                    "type": "string",
-                    "title": "The Schemeuri Schema ",
-                    "default": "",
-                    "examples": [
-                      "http://orcid.org/"
-                    ]
-                  },
-                  "nameIdentifierScheme": {
-                    "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier/properties/nameIdentifierScheme",
-                    "type": "string",
-                    "title": "The Nameidentifierscheme Schema ",
-                    "default": "",
-                    "examples": [
-                      "ORCID"
-                    ]
-                  },
-                  "value": {
-                    "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier/properties/value",
-                    "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
-                    "examples": [
-                      "0000-0002-7285-027X"
-                    ]
-                  }
-                }
-              },
-              "affiliation": {
-                "$id": "/properties/contributors/properties/contributor/properties/affiliation",
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "$id": "/properties/contributors/properties/contributor/properties/affiliation/properties/value",
-                    "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
-                    "examples": [
-                      "California Digital Library"
-                    ]
-                  }
-                }
               }
             }
+          },
+          "givenName": {
+            "$id": "/properties/contributors/properties/contributor/properties/givenName",
+            "type": "object",
+            "properties": {
+              "value": {
+                "$id": "/properties/contributors/properties/contributor/properties/givenName/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "Joan"
+                ]
+              }
+            }
+          },
+          "familyName": {
+            "$id": "/properties/contributors/properties/contributor/properties/familyName",
+            "type": "object",
+            "properties": {
+              "value": {
+                "$id": "/properties/contributors/properties/contributor/properties/familyName/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "Starr"
+                ]
+              }
+            }
+          },
+          "nameIdentifier": {
+            "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier",
+            "type": "object",
+            "properties": {
+              "schemeURI": {
+                "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier/properties/schemeURI",
+                "type": "string",
+                "title": "The Schemeuri Schema ",
+                "default": "",
+                "examples": [
+                  "http://orcid.org/"
+                ]
+              },
+              "nameIdentifierScheme": {
+                "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier/properties/nameIdentifierScheme",
+                "type": "string",
+                "title": "The Nameidentifierscheme Schema ",
+                "default": "",
+                "examples": [
+                  "ORCID"
+                ]
+              },
+              "value": {
+                "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier/properties/value",
+                "type": "string",
+                "title": "The Value Schema ",
+                "default": "",
+                "examples": [
+                  "0000-0002-7285-027X"
+                ]
+              }
+            },
+            "required": ["nameIdentifierScheme"]
+          },
+          "affiliation": {
+            "$id": "/properties/contributors/properties/contributor/properties/affiliation",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "title": "The Value Schema ",
+              "default": "",
+              "examples": [
+                "California Digital Library"
+              ]
+            }
           }
-        }
+        },
+        "required": ["contributorType", "contributorName"]
       }
     },
     "dates": {
@@ -375,38 +355,32 @@
       "items": {
         "type": "object",
         "properties": {
-          "date": {
-            "$id": "/properties/dates/properties/date",
+          "dateType": {
+            "$id": "/properties/dates/properties/date/properties/dateType",
+            "type": "string",
+            "title": "The Datetype Schema ",
+            "default": "",
+            "examples": [
+              "Updated"
+            ]
+          },
+          "dateInformation": {
+            "$id": "/properties/dates/properties/date/properties/dateInformation",
+            "type": "string",
+            "title": "The Dateinformation Schema ",
+            "default": "",
+            "examples": [
+              "Updated with 4.1 properties"
+            ]
+          },
+          "value": {
+            "$id": "/properties/dates/properties/date/properties/value",
             "type": "object",
-            "properties": {
-              "dateType": {
-                "$id": "/properties/dates/properties/date/properties/dateType",
-                "type": "string",
-                "title": "The Datetype Schema ",
-                "default": "",
-                "examples": [
-                  "Updated"
-                ]
-              },
-              "dateInformation": {
-                "$id": "/properties/dates/properties/date/properties/dateInformation",
-                "type": "string",
-                "title": "The Dateinformation Schema ",
-                "default": "",
-                "examples": [
-                  "Updated with 4.1 properties"
-                ]
-              },
-              "value": {
-                "$id": "/properties/dates/properties/date/properties/value",
-                "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
-                "examples": [
-                  "2017-09-13"
-                ]
-              }
-            }
+            "title": "The Value Schema ",
+            "default": "",
+            "examples": [
+              "2017-09-13"
+            ]
           }
         }
       }
@@ -448,97 +422,84 @@
       "$id": "/properties/alternateIdentifiers",
       "type": "array",
       "items": {
-        "type": "object",
         "properties": {
-          "alternateIdentifier": {
-            "$id": "/properties/alternateIdentifiers/properties/alternateIdentifier",
-            "type": "object",
-            "properties": {
-              "alternateIdentifierType": {
-                "$id": "/properties/alternateIdentifiers/properties/alternateIdentifier/properties/alternateIdentifierType",
-                "type": "string",
-                "title": "The Alternateidentifiertype Schema ",
-                "default": "",
-                "examples": [
-                  "URL"
-                ]
-              },
-              "value": {
-                "$id": "/properties/alternateIdentifiers/properties/alternateIdentifier/properties/value",
-                "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
-                "examples": [
-                  "https://schema.datacite.org/meta/kernel-4.1/example/datacite-example-full-v4.1.xml"
-                ]
-              }
-            }
+          "alternateIdentifierType": {
+            "$id": "/properties/alternateIdentifiers/properties/alternateIdentifier/properties/alternateIdentifierType",
+            "type": "string",
+            "title": "The Alternateidentifiertype Schema ",
+            "default": "",
+            "examples": [
+              "URL"
+            ]
+          },
+          "value": {
+            "$id": "/properties/alternateIdentifiers/properties/alternateIdentifier/properties/value",
+            "type": "string",
+            "title": "The Value Schema ",
+            "default": "",
+            "examples": [
+              "https://schema.datacite.org/meta/kernel-4.1/example/datacite-example-full-v4.1.xml"
+            ]
           }
-        }
+        },
+        "required": ["alternateIdentifierType"]
       }
     },
     "relatedIdentifiers": {
       "$id": "/properties/relatedIdentifiers",
       "type": "array",
       "items": {
+        "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items",
         "type": "object",
         "properties": {
-          "relatedIdentifier": {
-            "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier",
-            "type": "array",
-            "items": {
-              "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items",
-              "type": "object",
-              "properties": {
-                "relatedIdentifierType": {
-                  "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/relatedIdentifierType",
-                  "type": "string",
-                  "title": "The Relatedidentifiertype Schema ",
-                  "default": "",
-                  "examples": [
-                    "URL"
-                  ]
-                },
-                "relationType": {
-                  "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/relationType",
-                  "type": "string",
-                  "title": "The Relationtype Schema ",
-                  "default": "",
-                  "examples": [
-                    "HasMetadata"
-                  ]
-                },
-                "relatedMetadataScheme": {
-                  "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/relatedMetadataScheme",
-                  "type": "string",
-                  "title": "The Relatedmetadatascheme Schema ",
-                  "default": "",
-                  "examples": [
-                    "citeproc+json"
-                  ]
-                },
-                "schemeURI": {
-                  "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/schemeURI",
-                  "type": "string",
-                  "title": "The Schemeuri Schema ",
-                  "default": "",
-                  "examples": [
-                    "https://github.com/citation-style-language/schema/raw/master/csl-data.json"
-                  ]
-                },
-                "value": {
-                  "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/value",
-                  "type": "string",
-                  "title": "The Value Schema ",
-                  "default": "",
-                  "examples": [
-                    "https://data.datacite.org/application/citeproc+json/10.5072/example-full"
-                  ]
-                }
-              }
-            }
+          "relatedIdentifierType": {
+            "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/relatedIdentifierType",
+            "type": "string",
+            "enum": ["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","IGSN","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN"],
+            "title": "The Relatedidentifiertype Schema ",
+            "default": "",
+            "examples": [
+              "URL"
+            ]
+          },
+          "relationType": {
+            "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/relationType",
+            "type": "string",
+            "title": "The Relationtype Schema ",
+            "default": "",
+            "examples": [
+              "HasMetadata"
+            ]
+          },
+          "relatedMetadataScheme": {
+            "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/relatedMetadataScheme",
+            "type": "string",
+            "title": "The Relatedmetadatascheme Schema ",
+            "default": "",
+            "examples": [
+              "citeproc+json"
+            ]
+          },
+          "schemeURI": {
+            "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/schemeURI",
+            "type": "string",
+            "title": "The Schemeuri Schema ",
+            "default": "",
+            "examples": [
+              "https://github.com/citation-style-language/schema/raw/master/csl-data.json"
+            ]
+          },
+          "value": {
+            "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/value",
+            "type": "string",
+            "title": "The Value Schema ",
+            "default": "",
+            "examples": [
+              "https://data.datacite.org/application/citeproc+json/10.5072/example-full"
+            ]
           }
-        }
+        },
+        "required": ["relatedIdentifierType", "relationType"]
       }
     },
     "sizes": {
@@ -569,24 +530,7 @@
       "$id": "/properties/formats",
       "type": "array",
       "items": {
-        "type": "object",
-        "properties": {
-          "format": {
-            "$id": "/properties/formats/properties/format",
-            "type": "object",
-            "properties": {
-              "value": {
-                "$id": "/properties/formats/properties/format/properties/value",
-                "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
-                "examples": [
-                  "application/xml"
-                ]
-              }
-            }
-          }
-        }
+        "type": "string"
       }
     },
     "version": {
@@ -604,38 +548,32 @@
       "items": {
         "type": "object",
         "properties": {
-          "rights": {
-            "$id": "/properties/rightsList/properties/rights",
-            "type": "object",
-            "properties": {
-              "lang": {
-                "$id": "/properties/rightsList/properties/rights/properties/lang",
-                "type": "string",
-                "title": "The Lang Schema ",
-                "default": "",
-                "examples": [
-                  "en-US"
-                ]
-              },
-              "rightsURI": {
-                "$id": "/properties/rightsList/properties/rights/properties/rightsURI",
-                "type": "string",
-                "title": "The Rightsuri Schema ",
-                "default": "",
-                "examples": [
-                  "http://creativecommons.org/publicdomain/zero/1.0/"
-                ]
-              },
-              "value": {
-                "$id": "/properties/rightsList/properties/rights/properties/value",
-                "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
-                "examples": [
-                  "CC0 1.0 Universal"
-                ]
-              }
-            }
+          "lang": {
+            "$id": "/properties/rightsList/properties/rights/properties/lang",
+            "type": "string",
+            "title": "The Lang Schema ",
+            "default": "",
+            "examples": [
+              "en-US"
+            ]
+          },
+          "rightsURI": {
+            "$id": "/properties/rightsList/properties/rights/properties/rightsURI",
+            "type": "string",
+            "title": "The Rightsuri Schema ",
+            "default": "",
+            "examples": [
+              "http://creativecommons.org/publicdomain/zero/1.0/"
+            ]
+          },
+          "value": {
+            "$id": "/properties/rightsList/properties/rights/properties/value",
+            "type": "string",
+            "title": "The Value Schema ",
+            "default": "",
+            "examples": [
+              "CC0 1.0 Universal"
+            ]
           }
         }
       }
@@ -646,40 +584,36 @@
       "items": {
         "type": "object",
         "properties": {
-          "description": {
-            "$id": "/properties/descriptions/properties/description",
-            "type": "object",
-            "properties": {
-              "lang": {
-                "$id": "/properties/descriptions/properties/description/properties/lang",
-                "type": "string",
-                "title": "The Lang Schema ",
-                "default": "",
-                "examples": [
-                  "en-US"
-                ]
-              },
-              "descriptionType": {
-                "$id": "/properties/descriptions/properties/description/properties/descriptionType",
-                "type": "string",
-                "title": "The Descriptiontype Schema ",
-                "default": "",
-                "examples": [
-                  "Abstract"
-                ]
-              },
-              "value": {
-                "$id": "/properties/descriptions/properties/description/properties/value",
-                "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
-                "examples": [
-                  "XML example of all DataCite Metadata Schema v4.1 properties."
-                ]
-              }
-            }
+          "lang": {
+            "$id": "/properties/descriptions/properties/description/properties/lang",
+            "type": "string",
+            "title": "The Lang Schema ",
+            "default": "",
+            "examples": [
+              "en-US"
+            ]
+          },
+          "descriptionType": {
+            "$id": "/properties/descriptions/properties/description/properties/descriptionType",
+            "type": "string",
+            "enum": ["Abstract","Methods","SeriesInformation","TableOfContents","TechnicalInfo","Other"],
+            "title": "The Descriptiontype Schema ",
+            "default": "",
+            "examples": [
+              "Abstract"
+            ]
+          },
+          "value": {
+            "$id": "/properties/descriptions/properties/description/properties/value",
+            "type": "string",
+            "title": "The Value Schema ",
+            "default": "",
+            "examples": [
+              "XML example of all DataCite Metadata Schema v4.1 properties."
+            ]
           }
-        }
+        },
+        "required": ["descriptionType"]
       }
     },
     "geoLocations": {
@@ -971,7 +905,7 @@
           "webLinkType": {
             "$id": "/properties/webLinks/properties/webLinkType",
             "type": "string",
-            "enum": [ "ViewURL", "SourceURL", "ProviderLogoURL", "ThumbnailURL", "Related" ],
+            "enum": ["ViewURL", "SourceURL", "ProviderLogoURL", "ThumbnailURL", "Related"],
             "title": "The Value Schema ",
             "default": "",
             "examples": [
@@ -1040,5 +974,5 @@
       }
     }
   },
-  "required": ["repositoryIdentifier", "researchDataList"]
+  "required": ["identifier", "creators", "titles", "publisher", "publicationYear", "resourceType", "repositoryIdentifier", "researchDataList"]
 }
