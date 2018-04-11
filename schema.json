@@ -42,6 +42,7 @@
               "nameType": {
                 "$id": "/properties/creators/properties/creator/properties/creatorName/properties/nameType",
                 "type": "string",
+                "enum": ["Organisational", "Personal"],
                 "title": "The Nametype Schema ",
                 "default": "",
                 "examples": [
@@ -212,6 +213,7 @@
           "schemeURI": {
             "$id": "/properties/subjects/properties/subject/properties/schemeURI",
             "type": "string",
+            "format": "uri",
             "title": "The Schemeuri Schema ",
             "default": "",
             "examples": [
@@ -270,6 +272,16 @@
               }
             }
           },
+          "nameType": {
+            "$id": "/properties/contributors/properties/contributor/properties/nameType",
+            "type": "string",
+            "enum": ["Organisational", "Personal"],
+            "title": "The Nametype Schema ",
+            "default": "",
+            "examples": [
+              "Personal"
+            ]
+          },
           "givenName": {
             "$id": "/properties/contributors/properties/contributor/properties/givenName",
             "type": "object",
@@ -307,6 +319,7 @@
               "schemeURI": {
                 "$id": "/properties/contributors/properties/contributor/properties/nameIdentifier/properties/schemeURI",
                 "type": "string",
+                "format": "uri",
                 "title": "The Schemeuri Schema ",
                 "default": "",
                 "examples": [
@@ -359,6 +372,7 @@
           "dateType": {
             "$id": "/properties/dates/properties/date/properties/dateType",
             "type": "string",
+            "enum": ["Accepted","Available","Copyrighted","Collected","Created","Issued","Submitted","Updated","Valid","Other"],
             "title": "The Datetype Schema ",
             "default": "",
             "examples": [
@@ -467,6 +481,7 @@
           "relationType": {
             "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/relationType",
             "type": "string",
+            "enum": ["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","IsDescribed by","Describes","HasMetadata","IsMetadataFor","HasVersion","IsVersionOf","IsNewVersionOf","IsPreviousVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsRequiredBy","Requires"],
             "title": "The Relationtype Schema ",
             "default": "",
             "examples": [
@@ -485,6 +500,7 @@
           "schemeURI": {
             "$id": "/properties/relatedIdentifiers/properties/relatedIdentifier/items/properties/schemeURI",
             "type": "string",
+            "format": "uri",
             "title": "The Schemeuri Schema ",
             "default": "",
             "examples": [
@@ -562,6 +578,7 @@
           "rightsURI": {
             "$id": "/properties/rightsList/properties/rights/properties/rightsURI",
             "type": "string",
+            "format": "uri",
             "title": "The Rightsuri Schema ",
             "default": "",
             "examples": [
@@ -828,6 +845,7 @@
                   "funderIdentifierType": {
                     "$id": "/properties/fundingReferences/properties/fundingReference/properties/funderIdentifier/properties/funderIdentifierType",
                     "type": "string",
+                    "enum": ["ISNI","GRID","Crossref Funder","Other"],
                     "title": "The Funderidentifiertype Schema ",
                     "default": "",
                     "examples": [
