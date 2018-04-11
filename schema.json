@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-06/schema",
+  "$schema": "http://json-schema.org/draft-07/schema",
   "type": "object",
   "definitions": {},
   "properties": {
@@ -376,7 +376,8 @@
           },
           "value": {
             "$id": "/properties/dates/properties/date/properties/value",
-            "type": "object",
+            "type": "string",
+            "pattern": "^([0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\\.[0-9]+)?)?([+-][0-9]{2}:[0-9]{2}|Z))?)?)?)?(\\/([0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\\.[0-9]+)?)?([+-][0-9]{2}:[0-9]{2}|Z))?)?)?)?)?$",
             "title": "The Value Schema ",
             "default": "",
             "examples": [
@@ -935,7 +936,8 @@
           },
           "researchDataURL": {
             "$id": "/properties/repositoryIdentifier/properties/researchDataURL",
-            "type": "string"
+            "type": "string",
+            "format": "uri"
           },
           "researchDataLabel": {
             "$id": "/properties/repositoryIdentifier/properties/researchDataLabel",
@@ -969,7 +971,8 @@
           },
           "rnbr": {
             "$id": "/properties/researchDiscipline/properties/rnbr",
-            "type": "string"
+            "type": "string",
+            "pattern": "^[0-9]{3}(-[0-9]{2})?$"
           }
         }
       }
