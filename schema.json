@@ -4,7 +4,6 @@
   "definitions": {},
   "properties": {
     "identifier": {
-
       "type": "object",
       "properties": {
         "identifierType": {
@@ -18,8 +17,7 @@
         },
         "value": {
           "type": "string",
-          "title": "The document's identifier.",
-          "default": "",
+          "title": "The Identifier is a unique string that identifies a resource. For software, determine whether the identifier is for a specific version of a piece of software, (per the Force11 Software Citation Principles), or for all versions.",
           "examples": [
             "10.5072/example-full"
           ]
@@ -38,16 +36,15 @@
               "nameType": {
                 "type": "string",
                 "enum": ["Organisational", "Personal"],
-                "title": "The Nametype Schema ",
-                "default": "",
+                "title": "The type of name.",
+                "default": "Personal",
                 "examples": [
                   "Personal"
                 ]
               },
               "value": {
                 "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
+                "title": "The full name of the creator.",
                 "examples": [
                   "Miller, Elizabeth"
                 ]
@@ -59,8 +56,7 @@
             "properties": {
               "value": {
                 "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
+                "title": "The personal or first name of the creator.",
                 "examples": [
                   "Elizabeth"
                 ]
@@ -72,8 +68,7 @@
             "properties": {
               "value": {
                 "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
+                "title": "The surname or last name of the creator.",
                 "examples": [
                   "Miller"
                 ]
@@ -85,24 +80,21 @@
             "properties": {
               "schemeURI": {
                 "type": "string",
-                "title": "The Schemeuri Schema ",
-                "default": "",
+                "title": "The URI of the name identifier schema",
                 "examples": [
                   "http://orcid.org/"
                 ]
               },
               "nameIdentifierScheme": {
                 "type": "string",
-                "title": "The Nameidentifierscheme Schema ",
-                "default": "",
+                "title": "The name of the name identifier schema.",
                 "examples": [
                   "ORCID"
                 ]
               },
               "value": {
                 "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
+                "title": "Uniquely identifies an individual or legal entity, according to various schemas.",
                 "examples": [
                   "0000-0001-5000-0007"
                 ]
@@ -111,17 +103,11 @@
             "required": ["nameIdentifierScheme"]
           },
           "affiliation": {
-            "type": "object",
-            "properties": {
-              "value": {
-                "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
-                "examples": [
-                  "DataCite"
-                ]
-              }
-            }
+            "type": "string",
+            "title": "The organisational or institutional affiliation of the creator.",
+            "examples": [
+              "DataCite"
+            ]
           }
         },
         "required": ["creatorName"]
@@ -134,22 +120,21 @@
         "properties": {
           "lang": {
             "type": "string",
-            "title": "The Lang Schema ",
-            "default": "",
+            "title": "The language of Title",
             "examples": [
               "en-US"
             ]
           },
           "value": {
             "type": "string",
-            "title": "The Value Schema ",
-            "default": "",
+            "title": "A name or title by which a resource is known. May be the title of a dataset or the name of a piece of software.",
             "examples": [
               "Full DataCite XML Example"
             ]
           },
           "titleType": {
             "type": "string",
+            "title": "The type of Title",
             "enum": ["AlternativeTitle", "Subtitle", "TranslatedTitle", "Other"]
           }
         },
@@ -158,16 +143,14 @@
     },
     "publisher": {
       "type": "string",
-      "title": "The Value Schema ",
-      "default": "",
+      "title": "The name of the entity that holds, archives, publishes prints, distributes, releases, issues, or produces the resource. This property will be used to formulate the citation, so consider the prominence of the role. For software, use Publisher for the code repository. If there is an entity other than a code repository, that 'holds, archives, publishes, prints, distributes, releases, issues, or produces' the code, use the property Contributor/contributorType/ hostingInstitution for the code repository.",
       "examples": [
         "DataCite"
       ]
     },
     "publicationYear": {
       "type": "number",
-      "title": "The Value Schema ",
-      "default": "",
+      "title": "The year when the data was or will be made publicly available. In the case of resources such as software or dynamic data where there may be multiple releases in one year, include the Date/dateType/ dateInformation property and sub-properties to provide more information about the publication or release date details.",
       "examples": [
         "2014"
       ]
@@ -179,8 +162,7 @@
         "properties": {
           "lang": {
             "type": "string",
-            "title": "The Lang Schema ",
-            "default": "",
+            "title": "The language of Subject.",
             "examples": [
               "en-US"
             ]
@@ -188,27 +170,28 @@
           "schemeURI": {
             "type": "string",
             "format": "uri",
-            "title": "The Schemeuri Schema ",
-            "default": "",
+            "title": "The URI of the subject identifier scheme.",
             "examples": [
               "http://dewey.info/"
             ]
           },
           "subjectScheme": {
             "type": "string",
-            "title": "The Subjectscheme Schema ",
-            "default": "",
+            "title": "The name of the subject scheme or classification code or authority if one is used.",
             "examples": [
               "dewey"
             ]
           },
           "value": {
             "type": "string",
-            "title": "The Value Schema ",
-            "default": "",
+            "title": "Subject, keyword, classification code, or key phrase describing the resource.",
             "examples": [
               "000 computer science"
             ]
+          },
+          "valueURI": {
+            "type": "string",
+            "title": "The URI of the subject term."
           }
         }
       }
@@ -221,8 +204,7 @@
           "contributorType": {
             "type": "string",
             "enum": ["ContactPerson", "DataCollector", "DataCurator", "DataManager", "Distributor", "Editor", "HostingInstitution", "Producer", "ProjectLeader", "ProjectManager", "ProjectMember", "RegistrationAgency", "RegistrationAuthority", "RelatedPerson", "Researcher", "ResearchGroup", "RightsHolder", "Sponsor", "Supervisor", "WorkPackageLeader", "Other"],
-            "title": "The Contributortype Schema ",
-            "default": "",
+            "title": "The type of contributor of the resource.",
             "examples": [
               "ProjectLeader"
             ]
@@ -232,30 +214,27 @@
             "properties": {
               "value": {
                 "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
+                "title": "The full name of the contributor.",
                 "examples": [
                   "Starr, Joan"
                 ]
+              },
+              "nameType": {
+                "type": "string",
+                "enum": ["Organisational", "Personal"],
+                "title": "The type of name.",
+                "examples": [
+                  "Personal"
+                ]
               }
             }
-          },
-          "nameType": {
-            "type": "string",
-            "enum": ["Organisational", "Personal"],
-            "title": "The Nametype Schema ",
-            "default": "",
-            "examples": [
-              "Personal"
-            ]
           },
           "givenName": {
             "type": "object",
             "properties": {
               "value": {
                 "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
+                "title": "The personal or first name of the contributor.",
                 "examples": [
                   "Joan"
                 ]
@@ -267,8 +246,7 @@
             "properties": {
               "value": {
                 "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
+                "title": "The surname or last name of the contributor.",
                 "examples": [
                   "Starr"
                 ]
@@ -281,24 +259,21 @@
               "schemeURI": {
                 "type": "string",
                 "format": "uri",
-                "title": "The Schemeuri Schema ",
-                "default": "",
+                "title": "The URI of the name identifier scheme.",
                 "examples": [
                   "http://orcid.org/"
                 ]
               },
               "nameIdentifierScheme": {
                 "type": "string",
-                "title": "The Nameidentifierscheme Schema ",
-                "default": "",
+                "title": "The name of the name identifier scheme.",
                 "examples": [
                   "ORCID"
                 ]
               },
               "value": {
                 "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
+                "title": "Uniquely identifies an individual or legal entity, according to various schemes.",
                 "examples": [
                   "0000-0002-7285-027X"
                 ]
@@ -310,8 +285,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "title": "The Value Schema ",
-              "default": "",
+              "title": "The organisational or institutional affiliation of the contributor.",
               "examples": [
                 "California Digital Library"
               ]
@@ -329,25 +303,23 @@
           "dateType": {
             "type": "string",
             "enum": ["Accepted","Available","Copyrighted","Collected","Created","Issued","Submitted","Updated","Valid","Other"],
-            "title": "The Datetype Schema ",
-            "default": "",
+            "title": "The type of date.",
             "examples": [
               "Updated"
             ]
           },
           "dateInformation": {
             "type": "string",
-            "title": "The Dateinformation Schema ",
-            "default": "",
+            "title": "Specific information about the date, if appropriate.",
             "examples": [
               "Updated with 4.1 properties"
             ]
           },
           "value": {
             "type": "string",
+            "minLength": 2,
             "pattern": "^([0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\\.[0-9]+)?)?([+-][0-9]{2}:[0-9]{2}|Z))?)?)?)?(\\/([0-9]{4}(-[0-9]{2}(-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\\.[0-9]+)?)?([+-][0-9]{2}:[0-9]{2}|Z))?)?)?)?)?$",
-            "title": "The Value Schema ",
-            "default": "",
+            "title": "Different dates relevant to the work.",
             "examples": [
               "2017-09-13"
             ]
@@ -357,8 +329,7 @@
     },
     "language": {
       "type": "string",
-      "title": "The Value Schema ",
-      "default": "",
+      "title": "The primary language of the resource.",
       "examples": [
         "en-US"
       ]
@@ -368,16 +339,14 @@
       "properties": {
         "resourceTypeGeneral": {
           "type": "string",
-          "title": "The Resourcetypegeneral Schema ",
-          "default": "",
+          "title": "The general type of a resource.",
           "examples": [
             "Software"
           ]
         },
         "value": {
           "type": "string",
-          "title": "The Value Schema ",
-          "default": "",
+          "title": "A description of the resource.",
           "examples": [
             "XML"
           ]
@@ -390,16 +359,14 @@
         "properties": {
           "alternateIdentifierType": {
             "type": "string",
-            "title": "The Alternateidentifiertype Schema ",
-            "default": "",
+            "title": "The type of the AlternateIdentifier.",
             "examples": [
               "URL"
             ]
           },
           "value": {
             "type": "string",
-            "title": "The Value Schema ",
-            "default": "",
+            "title": "An identifier or identifiers other than the primary Identifier applied to the resource being registered. This may be any alphanumeric string which is unique within its domain of issue. May be used for local identifiers. AlternateIdentifier should be used for another identifier of the same instance (same location, same file).",
             "examples": [
               "https://schema.datacite.org/meta/kernel-4.1/example/datacite-example-full-v4.1.xml"
             ]
@@ -416,8 +383,7 @@
           "relatedIdentifierType": {
             "type": "string",
             "enum": ["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","IGSN","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN"],
-            "title": "The Relatedidentifiertype Schema ",
-            "default": "",
+            "title": "The type of the RelatedIdentifier.",
             "examples": [
               "URL"
             ]
@@ -425,16 +391,14 @@
           "relationType": {
             "type": "string",
             "enum": ["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","IsDescribed by","Describes","HasMetadata","IsMetadataFor","HasVersion","IsVersionOf","IsNewVersionOf","IsPreviousVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsRequiredBy","Requires"],
-            "title": "The Relationtype Schema ",
-            "default": "",
+            "title": "Description of the relationship of the resource being registered (A) and the related resource (B).",
             "examples": [
               "HasMetadata"
             ]
           },
           "relatedMetadataScheme": {
             "type": "string",
-            "title": "The Relatedmetadatascheme Schema ",
-            "default": "",
+            "title": "The name of the scheme.",
             "examples": [
               "citeproc+json"
             ]
@@ -442,16 +406,21 @@
           "schemeURI": {
             "type": "string",
             "format": "uri",
-            "title": "The Schemeuri Schema ",
-            "default": "",
+            "title": "The URI of the relatedMetadataScheme.",
             "examples": [
               "https://github.com/citation-style-language/schema/raw/master/csl-data.json"
             ]
           },
+          "schemeType": {
+            "type": "string",
+            "title": "The type of the relatedMetadataScheme, linked with the schemeURI.",
+            "examples": [
+              "XSD"
+            ]
+          },
           "value": {
             "type": "string",
-            "title": "The Value Schema ",
-            "default": "",
+            "title": "Identifiers of related resources. These must be globally unique identifiers",
             "examples": [
               "https://data.datacite.org/application/citeproc+json/10.5072/example-full"
             ]
@@ -470,8 +439,7 @@
             "properties": {
               "value": {
                 "type": "string",
-                "title": "The Value Schema ",
-                "default": "",
+                "title": "Size (e.g. bytes, pages, inches, etc.) or duration (extent), e.g. hours, minutes, days, etc., of a resource.",
                 "examples": [
                   "4 kB"
                 ]
@@ -483,14 +451,14 @@
     },
     "formats": {
       "type": "array",
+      "title": "Technical format of the resource.",
       "items": {
         "type": "string"
       }
     },
     "version": {
       "type": "string",
-      "title": "The Value Schema ",
-      "default": "",
+      "title": "The version number of the resource",
       "examples": [
         "4.1"
       ]
@@ -502,8 +470,7 @@
         "properties": {
           "lang": {
             "type": "string",
-            "title": "The Lang Schema ",
-            "default": "",
+            "title": "The language of the right's description.",
             "examples": [
               "en-US"
             ]
@@ -511,16 +478,14 @@
           "rightsURI": {
             "type": "string",
             "format": "uri",
-            "title": "The Rightsuri Schema ",
-            "default": "",
+            "title": "The URI of the license.",
             "examples": [
               "http://creativecommons.org/publicdomain/zero/1.0/"
             ]
           },
           "value": {
             "type": "string",
-            "title": "The Value Schema ",
-            "default": "",
+            "title": "Any rights information for this resource. The property may be repeated to record complex rights characteristics.",
             "examples": [
               "CC0 1.0 Universal"
             ]
@@ -535,8 +500,7 @@
         "properties": {
           "lang": {
             "type": "string",
-            "title": "The Lang Schema ",
-            "default": "",
+            "title": "The language of the description.",
             "examples": [
               "en-US"
             ]
@@ -544,16 +508,14 @@
           "descriptionType": {
             "type": "string",
             "enum": ["Abstract","Methods","SeriesInformation","TableOfContents","TechnicalInfo","Other"],
-            "title": "The Descriptiontype Schema ",
-            "default": "",
+            "title": "The type of the Description.",
             "examples": [
               "Abstract"
             ]
           },
           "value": {
             "type": "string",
-            "title": "The Value Schema ",
-            "default": "",
+            "title": "All additional information that does not fit in any of the other categories. May be used for technical information.",
             "examples": [
               "XML example of all DataCite Metadata Schema v4.1 properties."
             ]
@@ -567,148 +529,136 @@
       "items": {
         "type": "object",
         "properties": {
-          "geoLocation": {
+          "geoLocationPlace": {
             "type": "object",
             "properties": {
-              "geoLocationPlace": {
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
-                    "examples": [
-                      "Atlantic Ocean"
-                    ]
-                  }
-                }
+              "value": {
+                "type": "string",
+                "title": "Description of a geographic location.",
+                "examples": [
+                  "Atlantic Ocean"
+                ]
+              }
+            }
+          },
+          "geoLocationPoint": {
+            "type": "object",
+            "properties": {
+              "pointLongitude": {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180,
+                "title": "Longitudinal dimension of point.",
+                "examples": [
+                  "-67.302"
+                ]
               },
-              "geoLocationPoint": {
-                "type": "object",
-                "properties": {
-                  "pointLongitude": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "string",
-                        "title": "The Value Schema ",
-                        "default": "",
-                        "examples": [
-                          "-67.302"
-                        ]
-                      }
-                    }
-                  },
-                  "pointLatitude": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "string",
-                        "title": "The Value Schema ",
-                        "default": "",
-                        "examples": [
-                          "31.233"
-                        ]
-                      }
-                    }
-                  }
-                }
+              "pointLatitude": {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90,
+                "title": "Latitudinal dimension of point.",
+                "examples": [
+                  "31.233"
+                ]
+              }
+            },
+            "required": ["pointLatitude", "pointLongitude"]
+          },
+          "geoLocationBox": {
+            "type": "object",
+            "properties": {
+              "westBoundLongitude": {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180,
+                "title": "Western longitudinal dimension of box.",
+                "examples": [
+                  "-71.032"
+                ]
               },
-              "geoLocationBox": {
-                "type": "object",
-                "properties": {
-                  "westBoundLongitude": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "string",
-                        "title": "The Value Schema ",
-                        "default": "",
-                        "examples": [
-                          "-71.032"
-                        ]
-                      }
-                    }
-                  },
-                  "eastBoundLongitude": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "string",
-                        "title": "The Value Schema ",
-                        "default": "",
-                        "examples": [
-                          "-68.211"
-                        ]
-                      }
-                    }
-                  },
-                  "southBoundLatitude": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "string",
-                        "title": "The Value Schema ",
-                        "default": "",
-                        "examples": [
-                          "41.090"
-                        ]
-                      }
-                    }
-                  },
-                  "northBoundLatitude": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "string",
-                        "title": "The Value Schema ",
-                        "default": "",
-                        "examples": [
-                          "42.893"
-                        ]
-                      }
-                    }
-                  }
-                }
+              "eastBoundLongitude": {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180,
+                "title": "Eastern longitudinal dimension of box.",
+                "examples": [
+                  "-68.211"
+                ]
               },
-              "geoLocationPolygon": {
-                "type": "object",
-                "properties": {
-                  "polygonPoint": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "pointLatitude": {
-                          "type": "object",
-                          "properties": {
-                            "value": {
-                              "type": "string",
-                              "title": "The Value Schema ",
-                              "default": "",
-                              "examples": [
-                                "41.991"
-                              ]
-                            }
-                          }
-                        },
-                        "pointLongitude": {
-                          "type": "object",
-                          "properties": {
-                            "value": {
-                              "type": "string",
-                              "title": "The Value Schema ",
-                              "default": "",
-                              "examples": [
-                                "-71.032"
-                              ]
-                            }
-                          }
-                        }
-                      }
+              "southBoundLatitude": {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90,
+                "title": "Southern latitudinal dimension of box.",
+                "examples": [
+                  "41.090"
+                ]
+              },
+              "northBoundLatitude": {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90,
+                "title": "Northern latitudinal dimension of box.",
+                "examples": [
+                  "42.893"
+                ]
+              }
+            },
+            "required": ["westBoundLongitude","eastBoundLongitude","northBoundLongitude","southBoundLongitude"]
+          },
+          "geoLocationPolygon": {
+            "type": "object",
+            "properties": {
+              "polygonPoint": {
+                "type": "array",
+                "minItems": 4,
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "pointLongitude": {
+                      "type": "number",
+                      "minimum": -180,
+                      "maximum": 180,
+                      "title": "Longitudinal dimension of point.",
+                      "examples": [
+                        "-67.302"
+                      ]
+                    },
+                    "pointLatitude": {
+                      "type": "number",
+                      "minimum": -90,
+                      "maximum": 90,
+                      "title": "Latitudinal dimension of point.",
+                      "examples": [
+                        "31.233"
+                      ]
                     }
                   }
                 }
+              }
+            }
+          },
+          "inPolygonPoint": {
+            "type": "object",
+            "properties": {
+              "pointLongitude": {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180,
+                "title": "Longitudinal dimension of point.",
+                "examples": [
+                  "-67.302"
+                ]
+              },
+              "pointLatitude": {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90,
+                "title": "Latitudinal dimension of point.",
+                "examples": [
+                  "31.233"
+                ]
               }
             }
           }
@@ -724,16 +674,11 @@
             "type": "object",
             "properties": {
               "funderName": {
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
-                    "examples": [
-                      "National Science Foundation"
-                    ]
-                  }
+                  "type": "string",
+                  "title": "Name of the funding provider.",
+                  "examples": [
+                    "National Science Foundation"
+                  ]
                 }
               },
               "funderIdentifier": {
@@ -742,16 +687,14 @@
                   "funderIdentifierType": {
                     "type": "string",
                     "enum": ["ISNI","GRID","Crossref Funder","Other"],
-                    "title": "The Funderidentifiertype Schema ",
-                    "default": "",
+                    "title": "The type of the funderIdentifier.",
                     "examples": [
                       "Crossref Funder ID"
                     ]
                   },
                   "value": {
                     "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
+                    "title": "Uniquely identifies a funding entity, according to various types.",
                     "examples": [
                       "https://doi.org/10.13039/100000001"
                     ]
@@ -763,11 +706,15 @@
                 "properties": {
                   "value": {
                     "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
+                    "title": "The code assigned by the funder to a sponsored award (grant).",
                     "examples": [
                       "CBET-106"
                     ]
+                  },
+                  "value": {
+                    "type": "string",
+                    "format": "uri",
+                    "title": "The URI leading to a page provided by the funder for more information about the award (grant)."
                   }
                 }
               },
@@ -776,8 +723,7 @@
                 "properties": {
                   "value": {
                     "type": "string",
-                    "title": "The Value Schema ",
-                    "default": "",
+                    "title": "The human readable title or name of the award (grant). ",
                     "examples": [
                       "Full DataCite XML Example"
                     ]
@@ -796,16 +742,14 @@
         "properties": {
           "webLinkName": {
             "type": "string",
-            "title": "The Value Schema ",
-            "default": "",
+            "title": "String value denoting the name of the link (sth that the user would see during browsing).",
             "examples": [
               "Fishing quotas"
             ]
           },
           "webLinkURI": {
             "type": "string",
-            "title": "The Value Schema ",
-            "default": "",
+            "title": "The (access) URI of the resource",
             "examples": [
               "http://gerdi.org/randomlink/123.csv"
             ]
@@ -813,8 +757,7 @@
           "webLinkType": {
             "type": "string",
             "enum": ["ViewURL", "SourceURL", "ProviderLogoURL", "ThumbnailURL", "Related"],
-            "title": "The Value Schema ",
-            "default": "",
+            "title": "The type of the weblink.",
             "examples": [
               "ViewURL"
             ]
@@ -825,7 +768,7 @@
     },
     "repositoryIdentifier": {
       "type": "string",
-      "title": "The repository's identifier"
+      "title": "A unique human readable string that identifies the source repository."
     },
     "researchDataList": {
       "type": "array",
@@ -833,16 +776,20 @@
         "type": "object",
         "properties": {
           "researchDataIdentifier": {
+            "title": "A downloadable file from the source repository.",
             "type": "string"
           },
           "researchDataURL": {
+            "title": "The URL that is points to the download of the file.",
             "type": "string",
             "format": "uri"
           },
           "researchDataLabel": {
+            "title": "A human readable name of the file.",
             "type": "string"
           },
           "researchDataType": {
+            "title": "The file type of the research data.",
             "type": "string"
           }
         },
@@ -851,6 +798,7 @@
     },
     "researchDiscipline": {
       "type": "array",
+      "title": "The research discipline(s) of the data set.",
       "items": {
         "type": "object",
         "properties": {
@@ -869,7 +817,6 @@
           }
         }
       }
-    }
-  },
+    },
   "required": ["identifier", "creators", "titles", "publisher", "publicationYear", "resourceType", "repositoryIdentifier", "researchDataList"]
 }
