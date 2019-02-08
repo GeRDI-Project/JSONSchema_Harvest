@@ -797,7 +797,7 @@
         "required": ["researchDataIdentifier", "researchDataURL"]
       }
     },
-    "researchDiscipline": {
+    "researchDisciplines": {
       "type": "array",
       "title": "The research discipline(s) of the data set.",
       "items": {
@@ -819,5 +819,42 @@
         }
       }
     },
+    "extensions": {
+      "type": "object",
+      "properties": {
+        "soep" : {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "variableName": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "concepts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "language": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "required": ["identifier", "creators", "titles", "publisher", "publicationYear", "resourceType", "repositoryIdentifier", "researchDataList"]
 }
