@@ -9,9 +9,7 @@
       "properties": {
         "identifierType": {
           "type": "string",
-          "enum": ["DOI"],
           "title": "The type of the identifier.",
-          "default": "DOI",
           "examples": [
             "DOI"
           ]
