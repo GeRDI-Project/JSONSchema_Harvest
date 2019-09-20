@@ -11,11 +11,7 @@
          "properties":{  
             "identifierType":{  
                "type":"string",
-               "enum":[  
-                  "DOI"
-               ],
                "title":"The type of the identifier.",
-               "default":"DOI",
                "examples":[  
                   "DOI"
                ]
@@ -57,6 +53,13 @@
                         "title":"The full name of the creator.",
                         "examples":[  
                            "Miller, Elizabeth"
+                        ]
+                     },
+                     "lang":{  
+                        "type":"string",
+                        "title":"The language of the Creator.",
+                        "examples":[  
+                           "en-US"
                         ]
                      }
                   }
@@ -115,11 +118,28 @@
                   ]
                },
                "affiliation":{  
-                  "type":"string",
-                  "title":"The organisational or institutional affiliation of the creator.",
-                  "examples":[  
-                     "DataCite"
-                  ]
+                  "type":"object",
+                  "properties":{  
+                     "value":{  
+                        "type":"string",
+                        "title":"The organisational or institutional affiliation of the Creator.",
+                        "examples":[  
+                           "DataCite"
+                        ]
+                     },
+                     "affiliationIdentifier":{  
+                        "type":"string",
+                        "title":"The identifier of the affiliation."
+                     },
+                     "affiliationIdentifierScheme":{  
+                        "type":"string",
+                        "title":"The name of the schema of the affiliation identifier."
+                     },
+                     "schemeURI":{  
+                        "type":"string",
+                        "title":"The URI of the affiliation identifier scheme."
+                     }
+                  }
                }
             },
             "required":[  
@@ -163,11 +183,23 @@
          }
       },
       "publisher":{  
-         "type":"string",
-         "title":"The name of the entity that holds, archives, publishes prints, distributes, releases, issues, or produces the resource. This property will be used to formulate the citation, so consider the prominence of the role. For software, use Publisher for the code repository. If there is an entity other than a code repository, that 'holds, archives, publishes, prints, distributes, releases, issues, or produces' the code, use the property Contributor/contributorType/ hostingInstitution for the code repository.",
-         "examples":[  
-            "DataCite"
-         ]
+         "type":"object",
+         "properties":{  
+            "lang":{  
+               "type":"string",
+               "title":"The language of the publisher.",
+               "examples":[  
+                  "en-US"
+               ]
+            },
+            "value":{  
+               "type":"string",
+               "title":"The name of the entity that holds, archives, publishes prints, distributes, releases, issues, or produces the resource. This property will be used to formulate the citation, so consider the prominence of the role. For software, use Publisher for the code repository. If there is an entity other than a code repository, that 'holds, archives, publishes, prints, distributes, releases, issues, or produces' the code, use the property Contributor/contributorType/ hostingInstitution for the code repository.",
+               "examples":[  
+                  "DataCite"
+               ]
+            }
+         }
       },
       "publicationYear":{  
          "type":"number",
@@ -183,7 +215,7 @@
             "properties":{  
                "lang":{  
                   "type":"string",
-                  "title":"The language of Subject.",
+                  "title":"The language of the Subject.",
                   "examples":[  
                      "en-US"
                   ]
@@ -272,6 +304,13 @@
                         "examples":[  
                            "Personal"
                         ]
+                     },
+                     "lang":{  
+                        "type":"string",
+                        "title":"The language of the Contributor.",
+                        "examples":[  
+                           "en-US"
+                        ]
                      }
                   }
                },
@@ -330,13 +369,27 @@
                   ]
                },
                "affiliation":{  
-                  "type":"array",
-                  "items":{  
-                     "type":"string",
-                     "title":"The organisational or institutional affiliation of the contributor.",
-                     "examples":[  
-                        "California Digital Library"
-                     ]
+                  "type":"object",
+                  "properties":{  
+                     "value":{  
+                        "type":"string",
+                        "title":"The organisational or institutional affiliation of the Contributor.",
+                        "examples":[  
+                           "DataCite"
+                        ]
+                     },
+                     "affiliationIdentifier":{  
+                        "type":"string",
+                        "title":"The identifier of the affiliation."
+                     },
+                     "affiliationIdentifierScheme":{  
+                        "type":"string",
+                        "title":"The name of the schema of the affiliation identifier."
+                     },
+                     "schemeURI":{  
+                        "type":"string",
+                        "title":"The URI of the affiliation identifier scheme."
+                     }
                   }
                }
             },
@@ -363,7 +416,8 @@
                      "Submitted",
                      "Updated",
                      "Valid",
-                     "Other"
+                     "Other",
+                     "Withdrawn"
                   ],
                   "title":"The type of date.",
                   "examples":[  
@@ -464,7 +518,8 @@
                      "PURL",
                      "UPC",
                      "URL",
-                     "URN"
+                     "URN",
+                     "w3id"
                   ],
                   "title":"The type of the RelatedIdentifier.",
                   "examples":[  
@@ -504,7 +559,9 @@
                      "IsDerivedFrom",
                      "IsSourceOf",
                      "IsRequiredBy",
-                     "Requires"
+                     "Requires",
+                     "IsObsoletedBy",
+                     "Obsoletes"
                   ],
                   "title":"Description of the relationship of the resource being registered (A) and the related resource (B).",
                   "examples":[  
@@ -605,7 +662,28 @@
                   "type":"string",
                   "title":"Any rights information for this resource. The property may be repeated to record complex rights characteristics.",
                   "examples":[  
-                     "CC0 1.0 Universal"
+                     "Creative Commons, Attribution 3.0 Germany"
+                  ]
+               },
+               "rightsIdentifier":{  
+                  "type":"string",
+                  "title":"A short, standardized version of the license name.",
+                  "examples":[  
+                     "CC-BY-3.0"
+                  ]
+               },
+               "rightsIdentifierScheme":{  
+                  "type":"string",
+                  "title":"The name of the scheme.",
+                  "examples":[  
+                     "SPDX"
+                  ]
+               },
+               "schemeURI":{  
+                  "type":"string",
+                  "title":"The URI of the funder identifier scheme.",
+                  "examples":[  
+                     "http://doi.org/"
                   ]
                }
             }
@@ -825,7 +903,8 @@
                               "ISNI",
                               "GRID",
                               "Crossref Funder",
-                              "Other"
+                              "Other",
+                              "ROR"
                            ],
                            "title":"The type of the funderIdentifier.",
                            "examples":[  
@@ -837,6 +916,13 @@
                            "title":"Uniquely identifies a funding entity, according to various types.",
                            "examples":[  
                               "https://doi.org/10.13039/100000001"
+                           ]
+                        },
+                        "schemeURI":{  
+                           "type":"string",
+                           "title":"The URI of the funder identifier scheme.",
+                           "examples":[  
+                              "http://doi.org/"
                            ]
                         }
                      }
